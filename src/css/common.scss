@@ -1,0 +1,33 @@
+
+*{
+    box-sizing:border-box;
+}
+
+html,body,#app,#app-all,#all{
+    height:100%;
+    display: flex;
+    flex-direction:column;
+    overflow: hidden;
+}
+
+#footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height:0.4rem;
+    font-size: 0.1rem;
+    a{
+        color:#333;
+        height:100%;
+        display:flex;
+        flex-direction:column;
+        justify-content:space-between;
+        align-items: center;
+    }
+    .iconfont{
+        font-size:0.2rem;
+    }
+    .active{
+        color:#ff4965;
+    }
+}
