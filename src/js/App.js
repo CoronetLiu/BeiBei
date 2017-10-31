@@ -1,5 +1,7 @@
 import React from "react";
 
+import store from './redux/store'
+import actions from './redux/actionCreator'
 
 class App extends React.Component{
     constructor(props,context){

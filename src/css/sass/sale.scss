@@ -44,5 +44,39 @@
         line-height:0.45rem;
         border-bottom: 1px solid #ebebeb;
     }
+    #store-box-c{
+        height:2.75rem;
+        #store-box-header-c{
+            font-size:0.15rem;
+            height:0.45rem;
+            padding:0 0.12rem;
+            display:flex;
+            justify-content:space-between;
+            align-items: center;
+            p{
+                width:1.2rem;
+                display:flex;
+                justify-content:space-between;
+                img{
+                    height:0.2rem;
+                    width:0.4rem;
+                }
+                a{
+                    font-size:0.15rem;
+                }
+            }
+        }
+        #goods-boxs-c{
+            display:flex;
+            #goods-box-c{
+                width:50%;
+                padding:0.1rem;
+                img{
+                    width:1.5rem;
+                    height:1.5rem;
+                }
+            }
+        }
+    }
 }
 

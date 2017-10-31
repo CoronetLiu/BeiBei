@@ -9,9 +9,11 @@ class Header extends React.Component{
         }
     }
     getHotSearch(){
-        fetch.get('http://localhost:8000/beibei_api/shopping/v3/hot_search_words?latitude=39.90469&longitude=116.407173').then((res)=>{
+        fetch.get('http://localhost:8000/public/data/hotSearch.json').then((res)=>{
+            // console.log(res.json);
             return res.json();
         }).then((data)=>{
+            // console.log(data);
             this.setState({
                 hotSearch:data
             })

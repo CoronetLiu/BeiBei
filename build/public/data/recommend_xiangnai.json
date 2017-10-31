@@ -1,0 +1,19 @@
+[
+    {
+        "id":1,
+        "img":"https://b1.hucdn.com/upload/item/1709/23/38057337389744_800x800.jpg!320q50.webp",
+        "price":39,
+        "oldprice":298,
+        "name":"男童冬装加绒保暖卫裤",
+        "description":"男童冬装加绒保暖卫裤 中大儿童裤子"
+    },
+    {
+        "id":2,
+        "img":"https://b1.hucdn.com/upload/item/1709/17/19960200809744_800x800.jpg!320q50.webp",
+        "price":109,
+        "oldprice":298,
+        "name":"男童冬款毛领贴标皮外套",
+        "description":"男童冬款毛领贴标皮外套 中大儿童保暖皮衣外套"
+    }
+
+]

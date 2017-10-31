@@ -28,7 +28,9 @@ ReactDOM.render(
             <Route path="/group" component={Group}></Route>
             <Route path="/new" component={New}></Route>
             <Route path="/car" component={Car}></Route>
-            <Route path="/mine" component={Mine}></Route>
+            <Route path="/mine" component={Mine}>
+
+            </Route>
             <Route path="/detail/:id" component={Detail}></Route>
             <Redirect from='*' to="/sale"/>
         </Route>

@@ -3,13 +3,13 @@ html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, l
 
 fieldset,img,c{ border:none; }
 
-img{display: block;}
+/*img{display: block;}*/
 
 address, caption, cite, code, dfn, th, var { font-style:normal; font-weight:normal; }
 
 ul, ol ,dl,li{ list-style:none; }
 
-a { text-decoration:none; }
+a { text-decoration:none;  color:#000}
 
 body {
     font-size:14px;
