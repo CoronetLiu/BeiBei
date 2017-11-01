@@ -30,6 +30,7 @@
     "jsonp": "^0.2.1",
     "react": "^15.2.0",
     "react-dom": "^15.2.0",
+    "react-redux": "^5.0.6",
     "react-router": "^2.0.0",
     "redux": "^3.7.2",
     "whatwg-fetch": "^2.0.3"
