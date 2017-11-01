@@ -25,6 +25,7 @@
     "webpack-dev-server": "^2.9.3"
   },
   "dependencies": {
+    "antd-mobile": "^2.0.1",
     "axios": "^0.17.0",
     "es6-promise": "^4.1.1",
     "jsonp": "^0.2.1",
@@ -33,6 +34,7 @@
     "react-redux": "^5.0.6",
     "react-router": "^2.0.0",
     "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0",
     "whatwg-fetch": "^2.0.3"
   }
 }

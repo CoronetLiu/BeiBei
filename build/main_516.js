@@ -1,6 +1,6 @@
 webpackJsonp([1],{
 
-/***/ 105:
+/***/ 106:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10,89 +10,149 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _redux = __webpack_require__(63);
+var _redux = __webpack_require__(41);
 
-var _reducer = __webpack_require__(207);
+var _reduxThunk = __webpack_require__(111);
+
+var _reduxThunk2 = _interopRequireDefault(_reduxThunk);
+
+var _reducer = __webpack_require__(211);
 
 var _reducer2 = _interopRequireDefault(_reducer);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var store = (0, _redux.createStore)(_reducer2.default);
+var store = (0, _redux.createStore)(_reducer2.default, (0, _redux.applyMiddleware)(_reduxThunk2.default));
 
 exports.default = store;
 
 /***/ }),
 
-/***/ 158:
+/***/ 112:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _reactRouter = __webpack_require__(51);
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
 
-var _App = __webpack_require__(191);
+var _axios = __webpack_require__(66);
 
-var _App2 = _interopRequireDefault(_App);
-
-var _Sale = __webpack_require__(227);
-
-var _Sale2 = _interopRequireDefault(_Sale);
-
-var _New = __webpack_require__(234);
-
-var _New2 = _interopRequireDefault(_New);
-
-var _Group = __webpack_require__(235);
-
-var _Group2 = _interopRequireDefault(_Group);
-
-var _Car = __webpack_require__(236);
-
-var _Car2 = _interopRequireDefault(_Car);
-
-var _Mine = __webpack_require__(237);
-
-var _Mine2 = _interopRequireDefault(_Mine);
-
-var _Detail = __webpack_require__(238);
-
-var _Detail2 = _interopRequireDefault(_Detail);
+var _axios2 = _interopRequireDefault(_axios);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-//---------- css -----------//
-__webpack_require__(239);
+var actionCreator = {
+    getTodos: function getTodos() {
+        _axios2.default.get("./public/data/......").then(function (res) {
+            store.dispatch({
+                type: 'GET_TODOS',
+                todos: res.data
+            });
+        });
+    },
+    addTodo: function addTodo(new_title) {
+        store.dispatch({
+            type: 'ADD_TODO',
+            title: new_title
+        });
+    }
+};
+
+exports.default = actionCreator;
+
+/***/ }),
+
+/***/ 161:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(162);
+
+var _reactRouter = __webpack_require__(52);
+
+var _App = __webpack_require__(195);
+
+var _App2 = _interopRequireDefault(_App);
+
+var _Sale = __webpack_require__(230);
+
+var _Sale2 = _interopRequireDefault(_Sale);
+
+var _New = __webpack_require__(264);
+
+var _New2 = _interopRequireDefault(_New);
+
+var _Group = __webpack_require__(265);
+
+var _Group2 = _interopRequireDefault(_Group);
+
+var _Car = __webpack_require__(266);
+
+var _Car2 = _interopRequireDefault(_Car);
+
+var _Mine = __webpack_require__(267);
+
+var _Mine2 = _interopRequireDefault(_Mine);
+
+var _Detail = __webpack_require__(268);
+
+var _Detail2 = _interopRequireDefault(_Detail);
+
+var _store = __webpack_require__(106);
+
+var _store2 = _interopRequireDefault(_store);
+
+var _reactRedux = __webpack_require__(68);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+__webpack_require__(269);
 //-------- css end --------//
 
 //---------- js -----------//
 
+//---------- css -----------//
 console.log(0);
 
 var React = __webpack_require__(5);
-var ReactDOM = __webpack_require__(117);
+var ReactDOM = __webpack_require__(132);
 
 ReactDOM.render(React.createElement(
-    _reactRouter.Router,
-    { history: _reactRouter.browserHistory },
+    _reactRedux.Provider,
+    { store: _store2.default },
     React.createElement(
-        _reactRouter.Route,
-        { path: "/", component: _App2.default },
-        React.createElement(_reactRouter.IndexRedirect, { to: "/sale" }),
-        React.createElement(_reactRouter.Route, { path: "/sale", component: _Sale2.default }),
-        React.createElement(_reactRouter.Route, { path: "/group", component: _Group2.default }),
-        React.createElement(_reactRouter.Route, { path: "/new", component: _New2.default }),
-        React.createElement(_reactRouter.Route, { path: "/car", component: _Car2.default }),
-        React.createElement(_reactRouter.Route, { path: "/mine", component: _Mine2.default }),
-        React.createElement(_reactRouter.Route, { path: "/detail/:id", component: _Detail2.default }),
-        React.createElement(_reactRouter.Redirect, { from: "*", to: "/sale" })
+        _reactRouter.Router,
+        { history: _reactRouter.browserHistory },
+        React.createElement(
+            _reactRouter.Route,
+            { path: "/", component: _App2.default },
+            React.createElement(_reactRouter.IndexRedirect, { to: "/sale" }),
+            React.createElement(_reactRouter.Route, { path: "/sale", component: _Sale2.default }),
+            React.createElement(_reactRouter.Route, { path: "/group", component: _Group2.default }),
+            React.createElement(_reactRouter.Route, { path: "/new", component: _New2.default }),
+            React.createElement(_reactRouter.Route, { path: "/car", component: _Car2.default }),
+            React.createElement(_reactRouter.Route, { path: "/mine", component: _Mine2.default }),
+            React.createElement(_reactRouter.Route, { path: "/detail/:id", component: _Detail2.default }),
+            React.createElement(_reactRouter.Redirect, { from: "*", to: "/sale" })
+        )
     )
 ), document.getElementById("app"));
 
 /***/ }),
 
-/***/ 191:
+/***/ 162:
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ 195:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -108,11 +168,11 @@ var _react = __webpack_require__(5);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _store = __webpack_require__(105);
+var _store = __webpack_require__(106);
 
 var _store2 = _interopRequireDefault(_store);
 
-var _actionCreator = __webpack_require__(208);
+var _actionCreator = __webpack_require__(112);
 
 var _actionCreator2 = _interopRequireDefault(_actionCreator);
 
@@ -151,7 +211,7 @@ exports.default = App;
 
 /***/ }),
 
-/***/ 207:
+/***/ 211:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -183,26 +243,6 @@ var reducer = function reducer() {
                 isFinished: false
             });
             return state;break;
-        case 'FINISH_TODO':
-
-            state.todos = state.todos.map(function (item) {
-                if (item.id == action.id) {
-                    item.isFinished = action.flag;
-                }
-                return item;
-            });
-
-            return state;break;
-        case 'REMOVE_TODO':
-            for (var i = 0; i < state.todos.length; i++) {
-                if (state.todos[i].id == action.id) {
-                    state.todos.splice(i, 1);
-                    break;
-                }
-            }
-
-            return state;break;
-
         default:
             return state;break;
     }
@@ -212,60 +252,7 @@ exports.default = reducer;
 
 /***/ }),
 
-/***/ 208:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _axios = __webpack_require__(66);
-
-var _axios2 = _interopRequireDefault(_axios);
-
-var _store = __webpack_require__(105);
-
-var _store2 = _interopRequireDefault(_store);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var actionCreator = {
-    getTodos: function getTodos() {
-        _axios2.default.get("./public/data/......").then(function (res) {
-            _store2.default.dispatch({
-                type: 'GET_TODOS',
-                todos: res.data
-            });
-        });
-    },
-    addTodo: function addTodo(new_title) {
-        _store2.default.dispatch({
-            type: 'ADD_TODO',
-            title: new_title
-        });
-    },
-    finishTodo: function finishTodo(id, flag) {
-        _store2.default.dispatch({
-            type: 'FINISH_TODO',
-            id: id, flag: flag
-        });
-    },
-    removeTodo: function removeTodo(id) {
-        _store2.default.dispatch({
-            type: 'REMOVE_TODO',
-            id: id
-        });
-    }
-};
-
-exports.default = actionCreator;
-
-/***/ }),
-
-/***/ 227:
+/***/ 230:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -281,17 +268,25 @@ var _react = __webpack_require__(5);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _Header = __webpack_require__(228);
+var _Header = __webpack_require__(231);
 
 var _Header2 = _interopRequireDefault(_Header);
 
-var _Main = __webpack_require__(232);
+var _Main = __webpack_require__(235);
 
 var _Main2 = _interopRequireDefault(_Main);
 
 var _Nav = __webpack_require__(30);
 
 var _Nav2 = _interopRequireDefault(_Nav);
+
+var _reactRedux = __webpack_require__(68);
+
+var _redux = __webpack_require__(41);
+
+var _actionCreator = __webpack_require__(112);
+
+var _actionCreator2 = _interopRequireDefault(_actionCreator);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -326,11 +321,17 @@ var Sale = function (_React$Component) {
     return Sale;
 }(_react2.default.Component);
 
-exports.default = Sale;
+exports.default = (0, _reactRedux.connect)(function (state) {
+    return state;
+}, function (dispatch) {
+    return {
+        actions: (0, _redux.bindActionCreators)(_actionCreator2.default, dispatch)
+    };
+})(Sale);
 
 /***/ }),
 
-/***/ 228:
+/***/ 231:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -346,7 +347,7 @@ var _react = __webpack_require__(5);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _fetch = __webpack_require__(229);
+var _fetch = __webpack_require__(232);
 
 var _fetch2 = _interopRequireDefault(_fetch);
 
@@ -445,7 +446,7 @@ exports.default = Header;
 
 /***/ }),
 
-/***/ 229:
+/***/ 232:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -455,7 +456,7 @@ Object.defineProperty(exports, "__esModule", {
 	value: true
 });
 
-var _get = __webpack_require__(230);
+var _get = __webpack_require__(233);
 
 var _get2 = _interopRequireDefault(_get);
 
@@ -467,7 +468,7 @@ exports.default = {
 
 /***/ }),
 
-/***/ 230:
+/***/ 233:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -478,9 +479,9 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = get;
 
-__webpack_require__(115);
+__webpack_require__(118);
 
-__webpack_require__(116);
+__webpack_require__(119);
 
 function get(url) {
 
@@ -494,7 +495,7 @@ function get(url) {
 
 /***/ }),
 
-/***/ 232:
+/***/ 235:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -510,7 +511,7 @@ var _react = __webpack_require__(5);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _Shop = __webpack_require__(233);
+var _Shop = __webpack_require__(236);
 
 var _Shop2 = _interopRequireDefault(_Shop);
 
@@ -557,7 +558,7 @@ exports.default = Main;
 
 /***/ }),
 
-/***/ 233:
+/***/ 236:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -689,7 +690,7 @@ exports.default = Shop;
 
 /***/ }),
 
-/***/ 234:
+/***/ 264:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -745,7 +746,7 @@ exports.default = New;
 
 /***/ }),
 
-/***/ 235:
+/***/ 265:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -801,7 +802,7 @@ exports.default = Group;
 
 /***/ }),
 
-/***/ 236:
+/***/ 266:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -857,7 +858,7 @@ exports.default = Car;
 
 /***/ }),
 
-/***/ 237:
+/***/ 267:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -913,7 +914,7 @@ exports.default = Mine;
 
 /***/ }),
 
-/***/ 238:
+/***/ 268:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -969,7 +970,7 @@ exports.default = Detail;
 
 /***/ }),
 
-/***/ 239:
+/***/ 269:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
@@ -992,7 +993,7 @@ var _react = __webpack_require__(5);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouter = __webpack_require__(51);
+var _reactRouter = __webpack_require__(52);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -1071,4 +1072,4 @@ exports.default = Nav;
 
 /***/ })
 
-},[158]);
+},[161]);
