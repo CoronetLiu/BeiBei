@@ -30,7 +30,7 @@ module.exports = {
         historyApiFallback:true,  //是否使用H5里HISTORYapi
         proxy:{
             '/beibei_api':{
-                target:'https://restapi.ele.me',
+                target:'https://dsapi.beibei.com',
                 changeOrigin: true,
                 pathRewrite:{
                     '^/beibei_api':'/'
