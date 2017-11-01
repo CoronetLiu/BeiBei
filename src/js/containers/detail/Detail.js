@@ -4,7 +4,6 @@ import Nav from "../../common/Nav";
 
 
 
-
 class Detail extends React.Component{
     constructor(props,context){
         super(props,context)

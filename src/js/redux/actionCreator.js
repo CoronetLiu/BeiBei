@@ -1,6 +1,5 @@
 
 import axios from 'axios'
-import store from './store'
 
 const actionCreator = {
     getTodos(){
@@ -16,19 +15,8 @@ const actionCreator = {
             type:'ADD_TODO',
             title:new_title
         })
-    },
-    finishTodo(id,flag){
-        store.dispatch({
-            type:'FINISH_TODO',
-            id,flag
-        })
-    },
-    removeTodo(id){
-        store.dispatch({
-            type:'REMOVE_TODO',
-            id
-        })
     }
+
 }
 
 export default actionCreator
