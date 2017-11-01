@@ -2,7 +2,7 @@
 * @Author: CL
 * @Date:   2017-10-26 22:21:36
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-10-31 22:28:23
+* @Last Modified time: 2017-11-01 11:07:58
 */
 
 const webpack = require("webpack");
@@ -15,7 +15,7 @@ const ExtractTextWebpackPlugin = require("extract-text-webpack-plugin");
 module.exports = {
     entry:{
         main:"./src/main.js",
-        vendor:["react","react-dom","es6-promise","whatwg-fetch","jsonp","react-router","axios","redux"]
+        vendor:["react","react-dom","es6-promise","whatwg-fetch","jsonp","react-router","axios","redux","react-redux"]
     }, //入口文件
     output:{
         path:__dirname + "/build", //必须是绝对路径   输出的地址
