@@ -22,7 +22,7 @@ import Mine from "./js/containers/mine/Mine"
 import Detail from "./js/containers/detail/Detail"
 
 import store from './js/redux/store'
-import {Provider} from 'react-redux'
+import { Provider } from 'react-redux'
 
 ReactDOM.render(
     <Provider store={store}>

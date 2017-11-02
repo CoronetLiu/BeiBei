@@ -1,6 +1,7 @@
 import React from "react";
 
 import Nav from "../../common/Nav";
+import Login from "./components/Login";
 
 
 
@@ -11,7 +12,7 @@ class Mine extends React.Component{
     render(){
         return (
                 <div id="all">
-                    MINE部分
+                    <Login/>
                     <Nav type="mine"/>
                 </div>
             )
