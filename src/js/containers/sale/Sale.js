@@ -4,9 +4,6 @@ import Header from "./components/Header";
 import Main from "./components/Main";
 import Nav from "../../common/Nav";
 
-import {connect} from 'react-redux'
-import {bindActionCreators} from 'redux'
-import actionCreator from '../../redux/actionCreator'
 
 class Sale extends React.Component{
     constructor(props,context){
@@ -24,8 +21,4 @@ class Sale extends React.Component{
 }
 
 
-export default connect(state=>state,(dispatch)=>{
-    return {
-        actions:bindActionCreators(actionCreator,dispatch)
-    }
-})(Sale)
+export default Sale

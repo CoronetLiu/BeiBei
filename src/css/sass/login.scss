@@ -1,0 +1,43 @@
+#login-box-c{
+    background: #f2f4f7;
+    flex:1;
+    #login-form-c{
+        margin-top:0.2rem;
+        text-align:center;
+        label{
+            background:#fff;
+            border-bottom: 1px solid #ebebeb;
+            display: flex;
+            height:0.5rem;
+            line-height: 0.5rem;
+            padding:0 0.1rem;
+            overflow: hidden;
+            .iconfont{
+                font-size: 0.25rem;
+                margin-right:0.1rem;
+            }
+            input{
+                width:2.5rem;
+                height:0.5rem;
+                font-size:0.18rem;
+                border:none;
+            }
+            .yzm-c{
+                display:inline-block;
+                width:1rem;
+                text-align: center;
+                font-size:0.25rem;
+            }
+        }
+        #login-btn-c{
+            border:none;
+            height:0.45rem;
+            width:3.5rem;
+            background:#ff4965;
+            border-radius:0.05rem;
+            margin-top:0.2rem;
+            color:#fff;
+            font-size:0.18rem;
+        }
+    }
+}
