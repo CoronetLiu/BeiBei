@@ -35,6 +35,13 @@ module.exports = {
                 pathRewrite:{
                     '^/beibei_api':'/'
                 }
+            },
+            '/beibei_api2':{
+                target:'https://api.beibei.com',
+                changeOrigin: true,
+                pathRewrite:{
+                    '^/beibei_api2':'/'
+                }
             }
         }
     },

@@ -12,7 +12,6 @@ class Group extends React.Component{
         return (
                 <div id="all">
                     <TodayHot/>
-                    <Nav type="group"/>
                 </div>
             )
     }

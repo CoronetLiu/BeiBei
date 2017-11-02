@@ -1,11 +1,12 @@
 import React from "react";
+import {Link} from 'react-router'
 class Header extends React.Component{
     constructor(props,context){
         super(props,context)
     }
     render(){
         return (
-				<div>
+				<Link to="/search">
 					<div className="search_box_yl">
 						<div className="search_yl">
 							<span className="mirror_yl"></span>
@@ -14,7 +15,7 @@ class Header extends React.Component{
 						</div>
 					</div>
 					
-				</div>
+				</Link>
             )
     }
 }

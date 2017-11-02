@@ -16,7 +16,10 @@ import App from "./js/App";
 
 import Sale from "./js/containers/sale/Sale"
 import New from "./js/containers/new/New"
+
 import Group from "./js/containers/group/Group"
+import Search from "./js/containers/group/containers/search"
+import SaleHot from "./js/containers/group/containers/saleHot"
 import Car from "./js/containers/car/Car"
 import Mine from "./js/containers/mine/Mine"
 import Detail from "./js/containers/detail/Detail"
@@ -31,6 +34,8 @@ ReactDOM.render(
                 <IndexRedirect to='/sale'/>
                 <Route path="/sale" component={Sale}></Route>
                 <Route path="/group" component={Group}></Route>
+                 <Route path="/search" component={Search}></Route>
+                 <Route path="/saleHot" component={SaleHot}></Route>
                 <Route path="/new" component={New}></Route>
                 <Route path="/car" component={Car}></Route>
                 <Route path="/mine" component={Mine}>
