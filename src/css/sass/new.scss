@@ -1,3 +1,65 @@
 /*new*/
 
 
+.newHeader{
+
+
+	.newDate-content-z{
+
+		height:0.45rem;
+		width:100%;
+		display:flex;
+		justify-content:space-around;
+		align-items:center;
+		background-image: -webkit-linear-gradient(315deg,#fad7eb,#b9c3fd);
+	    background-image: linear-gradient(135deg,#fad7eb,#b9c3fd);
+
+	    .newDate-slide-z{
+	    	
+	    	width:0.75rem;
+	    	display:flex;
+	    	flex-direction:column;
+	    	justify-content:center;
+
+	    	.time{
+	    		text-align:center;
+	    		font-size: 0.14rem;
+	    		font-weight:bold;
+	    		color: #fff;
+	    	}
+
+	    	.status{
+	    		text-align:center;
+	    		font-size:0.06rem;
+	    		color: #fff;
+	    	}
+
+	    }
+	}
+
+	.new-search-z{
+		height:0.4rem;
+		width:100%;
+		display:flex;
+		justify-content:space-around;
+		align-items:center;
+
+	    	.banner-slide-z{
+	    		width:auto;
+	    		padding:0.1rem 0.15rem;
+	    		font-size:0.14rem;
+	    	}
+		
+	}
+
+}
+
+/*main*/
+
+.newMain{
+	flex:1;
+    overflow:scroll;  
+    background:#f2f4f6;
+}
+
+

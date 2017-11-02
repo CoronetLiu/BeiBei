@@ -18,26 +18,6 @@ const reducer = (state=_state,action)=>{
                 isFinished:false
             })
             return state;break;
-        case 'FINISH_TODO':
-
-            state.todos=state.todos.map(function  (item) {
-                if(item.id==action.id){
-                    item.isFinished=action.flag
-                }
-                return item
-            })
-
-            return state;break;
-        case 'REMOVE_TODO':
-            for(var i =0;i<state.todos.length;i++){
-                if(state.todos[i].id==action.id){
-                    state.todos.splice(i,1)
-                    break;
-                }
-            }
-
-            return state;break;
-
         default :
             return state;break;
     }

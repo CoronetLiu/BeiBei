@@ -1,8 +1,8 @@
 import React from "react";
 
 import Nav from "../../common/Nav";
-
-
+import NewHeader from "./components/NewHeader";
+import NewMain from "./components/NewMain";
 
 class New extends React.Component{
     constructor(props,context){
@@ -11,7 +11,8 @@ class New extends React.Component{
     render(){
         return (
                 <div id="all">
-                    NEW部分
+                    <NewHeader/>
+                    <NewMain/>
                     <Nav type="new"/>
                 </div>
             )
