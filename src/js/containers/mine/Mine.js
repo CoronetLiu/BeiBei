@@ -5,6 +5,9 @@ import Login from "./components/Login";
 
 import {connect} from 'react-redux'
 
+import {bindActionCreators} from "redux"
+
+import actionCreator from '../../redux/actionCreator'
 
 class Mine extends React.Component{
     constructor(props,context){
@@ -29,7 +32,9 @@ let mapStateToProps = state=>{
 }
 
 let mapDispatchToProps = (dispatch)=>{
-    return {}
+    return {
+        actions:bindActionCreators(actionCreator,dispatch)
+    }
 }
 
 export default connect(mapStateToProps,mapDispatchToProps)(Mine)

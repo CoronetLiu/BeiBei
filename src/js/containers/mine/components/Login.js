@@ -11,7 +11,6 @@ class Login extends React.Component{
         super(props,context)
     }
     login(e){
-        console.log(this.refs.userID.value)
         e.preventDefault();
         this.props.actions.changeUserInfo({
             status:'login',
@@ -40,6 +39,7 @@ class Login extends React.Component{
                 </div>
             )
     }
+
 }
 
 let mapStateToProps = state=>{
