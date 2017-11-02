@@ -1,7 +1,7 @@
 import React from "react";
 
 import Nav from "../../common/Nav";
-
+import TodayHot from "./containers/todayHot"
 
 
 class Group extends React.Component{
@@ -11,7 +11,7 @@ class Group extends React.Component{
     render(){
         return (
                 <div id="all">
-                    GROUP部分
+                    <TodayHot/>
                     <Nav type="group"/>
                 </div>
             )

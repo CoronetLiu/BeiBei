@@ -1,4 +1,5 @@
 //---------- css -----------//
+import 'antd-mobile/dist/antd-mobile.css';
 require ("./css/App.scss");
 //-------- css end --------//
 

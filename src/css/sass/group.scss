@@ -1,3 +1,55 @@
 /*group*/
+.th_index_yl{
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    .search_box_yl{
+        padding:0.08rem 0.12rem;
+        .search_yl{
+            height:0.31rem;
+            border:0.01rem solid rgba(42,50,60,.2);
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            border-radius: 0.03rem;
+            padding-left:0.06rem;
+            .mirror_yl{
+                display: inline-block;
+                background-image: url(https://h0.hucdn.com/open/201709/7b7654f8eb2512df_32x32.png);
+                background-size: 100% 100%;
+                width: .16rem;
+                height: .16rem;
+            }
+            .logo_yl{
+                display:inline-block;
+                background-image: url(https://h0.hucdn.com/open/201709/b2ffbe6a078ad893_62x30.png);
+                background-size: 100% 100%;
+                width: 0.31rem;
+                height: 0.15rem;
+                margin-left:0.07rem;
+                margin-right:0.1rem;
+            }
+            .tip_yl{
+                display: inline-block;
+                font-size: 0.12rem;
+                color:#8f8f8f;
+            }
+        }
+    }
+    .nav_yl{
+        display: flex;
+        width:100%;
+        padding:0.13rem 0;
+        border-bottom:0.01rem solid #ebebeb;
+        .nav_item_yl{
+            width:auto;
+            padding:0 0.12rem;
+            font-size: 0.13rem;
+            color:#333333;
+        }
+    }
+    .th_main_yl{
+        flex:1;
+    }
 
-
+}
