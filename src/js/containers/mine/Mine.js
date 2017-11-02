@@ -1,7 +1,9 @@
 import React from "react";
 
 import Nav from "../../common/Nav";
+import Login from "./components/Login";
 
+import {connect} from 'react-redux'
 
 
 class Mine extends React.Component{
@@ -11,11 +13,23 @@ class Mine extends React.Component{
     render(){
         return (
                 <div id="all">
-                    MINE部分
+                {
+                    this.props.userInfo.userID?<p>用户:{this.props.userInfo.userID}</p>:<Login/>
+                }
                     <Nav type="mine"/>
                 </div>
             )
     }
 }
 
-export default Mine
+let mapStateToProps = state=>{
+    return {
+        userInfo:state.userInfo
+    }
+}
+
+let mapDispatchToProps = (dispatch)=>{
+    return {}
+}
+
+export default connect(mapStateToProps,mapDispatchToProps)(Mine)

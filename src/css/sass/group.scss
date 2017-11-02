@@ -1,3 +1,178 @@
 /*group*/
+.th_index_yl{
+    display: flex;
+    height:100%;
+    flex-direction: column;
+    .index_main_yl{
+        flex:1;
+        overflow:auto;
+    }
+    .search_box_yl{
+        padding:0.08rem 0.12rem;
+        .search_yl{
+            height:0.31rem;
+            border:0.01rem solid rgba(42,50,60,.2);
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            border-radius: 0.03rem;
+            padding-left:0.06rem;
+            .mirror_yl{
+                display: inline-block;
+                background-image: url(https://h0.hucdn.com/open/201709/7b7654f8eb2512df_32x32.png);
+                background-size: 100% 100%;
+                width: .16rem;
+                height: .16rem;
+            }
+            .logo_yl{
+                display:inline-block;
+                background-image: url(https://h0.hucdn.com/open/201709/b2ffbe6a078ad893_62x30.png);
+                background-size: 100% 100%;
+                width: 0.31rem;
+                height: 0.15rem;
+                margin-left:0.07rem;
+                margin-right:0.1rem;
+            }
+            .tip_yl{
+                display: inline-block;
+                font-size: 0.12rem;
+                color:#8f8f8f;
+            }
+        }
+    }
+    .nav_yl{
+        display: flex;
+        width:100%;
+        padding:0.13rem 0;
+        border-bottom:0.01rem solid #ebebeb;
+        .nav_item_yl{
+            width:auto;
+            padding:0 0.12rem;
+            font-size: 0.13rem;
+            color:#333333;
+        }
+    }
+    .banner_box_yl{
+        display:flex;
+        padding-top:0.12rem;
+        padding-bottom:0.08rem;
+        .banner_item_yl{
+            width:20%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            img{
+                width:0.6rem;
+                height:0.4rem;
+            }
+            p{
+                font-size: 0.11rem;
+                color:#333333;
+            }
+        }
+    }
+    .th_main_yl{
+        background:#f2f2f2;
+        .goods_box_yl{
+            display: flex;
+            flex-direction: column;
+            background:#fff;
+            margin-top:0.08rem;
+            img{
+                width:100%;
+                height:1.75rem;
+            }
+            p{
+                font-size: 0.14rem;
+                color:#333333;
+                line-height: 0.4rem;
+                width:98%;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+            .price_list_yl{
+                display: flex;
+                padding:0 0.12rem;
+                align-items: center;
+                p{
+                    display: flex;
+                    align-items: center;
+                    li:nth-child(1){
+                        color:#ff4965;
+                        font-size: 0.13rem;
+                        font-weight: bold;
+                        span{
+                            color:#ff4965;
+                            font-size: 0.09rem;   
+                        }
+                    }
+                    li:nth-child(2){
+                        font-size:0.08rem;
+                        text-decoration:line-through;
+                    }
+                }
+                .goTeam_yl{
+                    font-size: 0.15rem;
+                    line-height: 0.3rem;
+                    text-align: center;
+                    float: right;
+                    width: 1.09rem;
+                    height: 0.3rem;
+                    box-sizing: border-box;
+                    border-radius: 0.3rem;
+                    color: #fff;
+                    background-image: -webkit-linear-gradient(135deg,#ff66a8,#ff667d);
+                    background-image: linear-gradient(-45deg,#ff66a8,#ff667d);
+                    position: relative;
+                    img{
+                        width:0.3rem;
+                        height:0.3rem;
+                        position: absolute;
+                        left:-0.15rem;
+                        
+                    }
+                }
+            }
+        }
+    }
 
-
+}
+.footer_yl{
+    display: flex;
+    height:0.49rem;
+    align-items: center;
+    border-top:0.01rem solid #ebebeb;
+    a{
+        display: flex;
+        flex-direction: column;
+        width:33.33%;
+        align-items: center;
+        p{
+            font-size: 0.1rem;
+        }
+        i{
+           font-size: 0.24rem!important;
+        }
+    }
+    .active_yl{
+        color:#ff4965;
+    }
+}
+//搜索页
+.searchBar_yl{
+    padding:0.08rem 0.12rem;
+    input{
+        width:3.06rem;
+        height:0.3rem;
+        padding:0 0.09rem;
+        border-radius: 0.06rem;
+        background:rgba(42,50,60,.08);
+        border:none;
+    }
+    a{
+        display: inline-block;
+        margin-left:0.07rem;
+        color:#ccc;
+    }
+}

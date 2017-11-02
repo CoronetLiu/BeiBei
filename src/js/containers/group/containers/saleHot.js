@@ -1,18 +1,15 @@
 import React from "react";
-
-
-
-class App extends React.Component{
+class SaleHot extends React.Component{
     constructor(props,context){
         super(props,context)
     }
     render(){
         return (
-                <div id="app-all">
-                    {this.props.children}
+                <div>
+                    热销哈哈哈
                 </div>
             )
     }
 }
 
-export default App
+export default SaleHot
