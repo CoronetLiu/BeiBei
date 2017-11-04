@@ -13,10 +13,6 @@ class Login extends React.Component{
         super(props,context)
     }
     login(e){
-<<<<<<< HEAD
-//      console.log(this.refs.userID.value)
-=======
->>>>>>> cc483c17a0ea8badbceeb0427ba6e4a7461a0ac2
         e.preventDefault();
         this.props.actions.login_c({
             status:'login',
