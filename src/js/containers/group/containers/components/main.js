@@ -8,7 +8,6 @@ class Main extends React.Component{
         }
     }
     getGoods(){
-    	console.log(56652)
     	axios.get("./public/data/addNew.json").then((res)=>{
     		this.setState({
     			goods:res.data
@@ -20,7 +19,7 @@ class Main extends React.Component{
     }
     showGoods(){
     	return this.state.goods.map((item,i)=>{
-    		
+
     		return (
     			<div className="goods_box_yl" key={item.id}>
 	    			<img src={item.img}/>

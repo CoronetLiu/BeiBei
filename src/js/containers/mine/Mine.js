@@ -2,19 +2,26 @@ import React from "react";
 
 import Nav from "../../common/Nav";
 import Login from "./components/Login";
+import MineInfo from "./components/MineInfo";
+
+import {Link} from 'react-router'
 
 import {connect} from 'react-redux'
 
+import {bindActionCreators} from "redux"
+
+import actionCreator from '../../redux/actionCreator'
 
 class Mine extends React.Component{
     constructor(props,context){
         super(props,context)
     }
     render(){
+        // console.log(this.props)
         return (
                 <div id="all">
                 {
-                    this.props.userInfo.userID?<p>用户:{this.props.userInfo.userID}</p>:<Login/>
+                    this.props.userInfo.userID?<MineInfo userInfo={this.props.userInfo}/>:<Login/>
                 }
                     <Nav type="mine"/>
                 </div>
@@ -29,7 +36,9 @@ let mapStateToProps = state=>{
 }
 
 let mapDispatchToProps = (dispatch)=>{
-    return {}
+    return {
+        actions:bindActionCreators(actionCreator,dispatch)
+    }
 }
 
 export default connect(mapStateToProps,mapDispatchToProps)(Mine)

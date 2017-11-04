@@ -2,6 +2,8 @@ import React from "react";
 
 import {connect} from 'react-redux'
 
+import {browserHistory} from "react-router"
+
 import {bindActionCreators} from "redux"
 
 import actionCreator from '../../../redux/actionCreator'
@@ -11,15 +13,22 @@ class Login extends React.Component{
         super(props,context)
     }
     login(e){
+<<<<<<< HEAD
 //      console.log(this.refs.userID.value)
+=======
+>>>>>>> cc483c17a0ea8badbceeb0427ba6e4a7461a0ac2
         e.preventDefault();
-        this.props.actions.changeUserInfo({
+        this.props.actions.login_c({
             status:'login',
             userID:this.refs.userID.value,
             password:this.refs.password.value
+        },function(){
+            browserHistory.push('/sale')
         })
+
     }
     render(){
+        // console.log(this.props)
         return (
                 <div id="login-box-c">
                     <form id="login-form-c"  onSubmit={this.login.bind(this)}>
@@ -40,6 +49,7 @@ class Login extends React.Component{
                 </div>
             )
     }
+
 }
 
 let mapStateToProps = state=>{
