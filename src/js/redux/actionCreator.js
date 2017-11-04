@@ -2,7 +2,7 @@
 import axios from 'axios'
 
 const actionCreator = {
-    changeUserInfo(params){
+    login_c(params,callback){
         return (dispatch)=>{
             axios.get("http://datainfo.duapp.com/shopdata/userinfo.php",{
                 params:params
@@ -10,8 +10,9 @@ const actionCreator = {
                 console.log(res.data)
                 if(res.data.userID){
                     dispatch({
-                        type:'CHANGE_USERINFO',
-                        userInfo:res.data
+                        type:'LOGIN',
+                        userInfo:res.data,
+                        callback
                     })
                 }else{
                     alert('fail')

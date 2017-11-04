@@ -2,6 +2,9 @@ import React from "react";
 
 import Nav from "../../common/Nav";
 import Login from "./components/Login";
+import MineInfo from "./components/MineInfo";
+
+import {Link} from 'react-router'
 
 import {connect} from 'react-redux'
 
@@ -14,10 +17,11 @@ class Mine extends React.Component{
         super(props,context)
     }
     render(){
+        // console.log(this.props)
         return (
                 <div id="all">
                 {
-                    this.props.userInfo.userID?<p>用户:{this.props.userInfo.userID}</p>:<Login/>
+                    this.props.userInfo.userID?<MineInfo userInfo={this.props.userInfo}/>:<Login/>
                 }
                     <Nav type="mine"/>
                 </div>
