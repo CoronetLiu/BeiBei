@@ -7,7 +7,6 @@ const actionCreator = {
             axios.get("http://datainfo.duapp.com/shopdata/userinfo.php",{
                 params:params
             }).then((res)=>{
-                // console.log(res.data)
                 if(res.data.userID){
                     dispatch({
                         type:'CHANGE_USERINFO',

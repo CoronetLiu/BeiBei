@@ -12,6 +12,7 @@ const reducer = (state=_state,action)=>{
             return state;break;
         case 'CHANGE_USERINFO':
             state.userInfo = action.userInfo;
+            console.log(state.userInfo)
             return state;break;
         default :
             return state;break;

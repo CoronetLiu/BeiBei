@@ -20,8 +20,8 @@ class Mine extends React.Component{
                 </div>
             )
     }
-}
 
+}
 let mapStateToProps = state=>{
     return {
         userInfo:state.userInfo

@@ -15,10 +15,10 @@ class Footer extends React.Component{
 						<i className="iconfont icon-xin"></i>
 						<p>热销榜</p>
 					</Link>
-					<a>
+					<Link to="mine">
 						<i className="iconfont icon-wode"></i>
 						<p>我的拼团</p>
-					</a>
+					</Link>
 				</div>
             )
     }
