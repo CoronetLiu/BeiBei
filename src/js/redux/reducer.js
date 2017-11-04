@@ -9,9 +9,6 @@ const reducer = (state=_state,action)=>{
     switch(action.type){
         case 'LOGIN':
             state.userInfo = action.userInfo;
-<<<<<<< HEAD
-            console.log(state.userInfo)
-=======
             // console.log(state)
             action.callback();
             return state;break;
