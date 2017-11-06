@@ -2,7 +2,7 @@ import React from "react";
 
 import Nav from "../../common/Nav";
 
-
+import CarBox from "./components/CarBox";
 
 class Car extends React.Component{
     constructor(props,context){
@@ -11,7 +11,7 @@ class Car extends React.Component{
     render(){
         return (
                 <div id="all">
-                    CAR部分
+                    <CarBox/>
                     <Nav type="car"/>
                 </div>
             )
