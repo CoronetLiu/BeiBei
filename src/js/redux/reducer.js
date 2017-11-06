@@ -15,7 +15,6 @@ const reducer = (state=_state,action)=>{
 
         case 'ADD_TODO':
             state.todos=state.todos.concat(action.todos)
->>>>>>> cc483c17a0ea8badbceeb0427ba6e4a7461a0ac2
             return state;break;
 
         default :

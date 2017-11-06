@@ -8,6 +8,7 @@ const actionCreator = {
                 params:params
             }).then((res)=>{
                 if(res.data.userID){
+                    localStorage.setItem('userInfo',JSON.stringify(res.data))
                     dispatch({
                         type:'LOGIN',
                         userInfo:res.data,

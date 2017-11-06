@@ -17,7 +17,7 @@ class Mine extends React.Component{
         super(props,context)
     }
     render(){
-        // console.log(this.props)
+        console.log(this.props)
         return (
                 <div id="all">
                 {
@@ -29,9 +29,12 @@ class Mine extends React.Component{
     }
 
 }
+// Mine.defaultProps = {
+//     userInfo:localStorage.getItem("userInfo")
+// }
 let mapStateToProps = state=>{
     return {
-        userInfo:state.userInfo
+        userInfo:JSON.parse(localStorage.getItem("userInfo")) || state.userInfo
     }
 }
 

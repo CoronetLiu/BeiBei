@@ -19,6 +19,7 @@ class Login extends React.Component{
             userID:this.refs.userID.value,
             password:this.refs.password.value
         },function(){
+
             browserHistory.push('/sale')
         })
 
